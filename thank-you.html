@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You! - Innocent</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f3f3f3;
+      text-align: center;
+      padding: 100px;
+    }
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    #countdown {
+      font-weight: bold;
+      color: #fa7e23;
+    }
+  </style>
+  <script>
+    let seconds = 5;
+    function countdown() {
+      const countdownElement = document.getElementById("countdown");
+      countdownElement.innerText = seconds;
+      seconds--;
+      if (seconds < 0) {
+        window.location.href = "index.html"; // Change this to your actual homepage file or route
+      } else {
+        setTimeout(countdown, 1000);
+      }
+    }
+    window.onload = countdown;
+  </script>
+</head>
+<body>
+  <h1>🎉 Thank You!</h1>
+  <p>Your message has been sent successfully.</p>
+  <p>You will be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
+</body>
+</html>
